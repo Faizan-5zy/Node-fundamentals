@@ -1,0 +1,44 @@
+// Interview Questions
+
+--> Who Handles Request/Response in Node.js?
+
+In Node.js, the http module is commonly used to handle request and response. It provides functionality to create an HTTP server, handle incoming requests, and send responses.
+
+--> What Does the http Module Handle in Node.js?
+
+The http module in Node.js handles the implementation of the HTTP server and client. It allows you to create an HTTP server to handle requests and responses. Additionally, it provides functions for making HTTP requests as a client.
+
+
+--> Is Node.js Single-Threaded? What Does It Mean?
+
+Yes, Node.js is single-threaded. The single-threaded nature of Node.js means that it operates using a single main thread to execute JavaScript code. However, Node.js can still handle concurrent operations through mechanisms like event-driven architecture and asynchronous non-blocking I/O operations. 
+
+
+--> How to Install Node Modules?
+
+To install Node modules, you can use the npm (Node Package Manager) command. Open a terminal and navigate to your project directory, then run:
+
+npm install
+
+This command reads the package.json file in your project and installs the dependencies listed in it.
+
+
+
+--> How to Recover node_modules If Deleted?
+
+If the node_modules directory is deleted, you can recover it by running the following command in the terminal:
+
+npm install
+
+This command reads the package.json file and installs the dependencies specified in it, recreating the node_modules directory.
+
+--> Should We Push node_modules to Git?
+
+Generally, it's not recommended to push the node_modules directory to Git. This is because node_modules can be large and contains dependencies that can be easily reinstalled using npm install based on the package.json file. Instead, you should include a .gitignore file in your project to exclude node_modules from version control:
+
+
+
+# .gitignore
+node_modules/
+
+This prevents the node_modules directory from being committed to your Git repository and keeps your repository size manageable. Team members can install dependencies using npm install after cloning the repository.
