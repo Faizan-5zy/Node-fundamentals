@@ -9,7 +9,7 @@
 // creating and writing files 
 const fs = require('fs')
 const path = require('path')
-const dirName = path.join(__dirname,'13-files')
+const dirName = path.join(__dirname,'7-files')
 
 // if dir not present create 
 if (!fs.existsSync(dirName)) {
